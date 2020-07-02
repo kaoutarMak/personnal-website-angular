@@ -1,0 +1,29 @@
+<section id="education">
+  <div class="title-head">
+    <h1>Education &amp; Training</h1>
+  </div>
+  <div class="row example-basic">
+    <div class="col-md-8 offset-1">
+      <ul class="timeline">
+        <li *ngFor="let training of data.trainings" class="timeline-item">
+          <div class="timeline-info">
+            <span>{{training.date}}</span>
+          </div>
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h4 class="timeline-title">{{training.title}}</h4>
+            <h6>{{training.location}}</h6>
+            <p>{{training.description}}</p>
+          </div>
+        </li>
+        <li class="timeline-item period">
+          <div class="timeline-info"></div>
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h2 class="timeline-title"></h2>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

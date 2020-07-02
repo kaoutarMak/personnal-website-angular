@@ -1,0 +1,50 @@
+<section class="contact" id="contactMe">
+  <div class="title-head">
+    <h1>Contact me</h1>
+  </div>
+  <div class="container-fluid"></div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="contact-info">
+        <img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image">
+        <h2>Contact me</h2>
+        <p>Whether you're interested in working with me or just want to say hello, I'd love to hear from you!</p>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="contact-form">
+        <div class="form-group">
+          <div class="col-sm-10">
+            <input type="text" class="form-control " id="fname" placeholder="First Name" name="fname">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-10 ">
+            <input type="text" class="form-control field-txt" id="lname" placeholder="Last Name" name="lname">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-10">
+            <input type="email" class="form-control field-txt" [(ngModel)]="email" id="email" placeholder="Email" name="email">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-10">
+            <input type="text" class="form-control field-txt" [(ngModel)]="object" id="object" placeholder="Object" name="object">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-10">
+            <textarea class="form-control field-txt" rows="5" [(ngModel)]="message" id="message" placeholder="Message"></textarea>
+          </div>
+        </div>
+        <div class="form-group actions">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" (click)="onClickSenMessage()" class="btn btn-default" [disabled]="!object && !email && !message" id="sendMail">Send</button>
+            <img id="loader-form" class="float-right" src="../../assets/image/spiner-resized.gif" *ngIf="showLowder">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
